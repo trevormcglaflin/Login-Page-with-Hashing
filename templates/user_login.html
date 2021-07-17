@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="little-form">
+  <form action="{{ url_for('.signup_form') }}" method="POST" id="signup_button">
+      <button type="submit" class="btn btn-primary mt-4">New user? Sign Up Here</button>
+  </form>
+</div>
+
+<div class="main-form">
+  <form action="{{ url_for('.login') }}" method="POST" id="login_form">
+      <label for="username">Username:</label>
+      <input class="form-control" type="text" id="username" name="username" required><br/>
+      <label for="password">Password:</label>
+      <input class="form-control" type='password' id="password" name="password" required>
+      <button type="submit" class="btn btn-primary mt-4">Login</button>
+  </form>
+</div>
+
+
+{% endblock %}

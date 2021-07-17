@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="pw-rules">
+    <p><strong>Strong Password Rules</strong></p>
+    <ul>
+        <li>Must contain at least 1 lower case and 1 upper case letter</li>
+        <li>Must contain at least one number</li>
+        <li>Must contain one special character</li>
+        <li>Must be between 8-25 characters</li>
+    </ul>
+</div>
+
+<div class="main-form">
+  <form action="{{ url_for('.signup') }}" method="POST" id="signup">
+      <label for="username">Username</label>
+      <input class="form-control" type="text" id="username" name="username" required><br/>
+      <label for="password">Password</label>
+      <input class="form-control" type='password' id="password" name="password" value="{{ generated_pw }}" required>
+      <button type="submit" class="btn btn-primary mt-4">Register</button>
+  </form>
+</div>
+<div class="little-form">
+    <form action="{{ url_for('.generate_pw') }}" method="POST" id="generate_pw">
+        <button type="submit" class="btn btn-primary mt-4">Generate Strong Password</button>
+        <p>{{ generated_pw }}</p>
+  </form>
+</div>
+
+
+{% endblock %}
