@@ -1,8 +1,3 @@
-Trevor McGlaflin
-July 2, 2021
-CS 166
-Final Project
-
 Project Overview
 
 This project is a flask app that allows for a user to securely login and sign up to my mock website TrevorMcGlaflin.com.
